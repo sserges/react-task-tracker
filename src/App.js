@@ -5,7 +5,7 @@ import Tasks from './components/Tasks'
 
 const App = () => {
 
-  const [tasks] = useState(
+  const [tasks, setTasks] = useState(
     [
       {
         id: 1,
@@ -28,10 +28,15 @@ const App = () => {
     ]
   )
 
+  // Delete Task
+  const deleteTask = (id) => {
+    setTasks(tasks.filter(task => task.id !== id))
+  }
+
   return (
     <div className="container">
       <Header />
-      <Tasks tasks={tasks} />
+      <Tasks tasks={tasks} onDelete={deleteTask} />
     </div>
   );
 }
