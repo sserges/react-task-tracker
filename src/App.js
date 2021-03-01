@@ -33,8 +33,14 @@ const App = () => {
   }
 
   // Delete Task
-  const deleteTask = (id) => {
-    setTasks(tasks.filter(task => task.id !== id))
+  const deleteTask = async (id) => {
+    // eslint-disable-next-line no-restricted-globals
+    if (confirm('Do you really want to delete this task?')) {
+      await fetch(`http://localhost:5000/tasks/${id}`, {
+        method: 'DELETE'
+      })
+      setTasks(tasks.filter(task => task.id !== id))
+    }
   }
 
   // Toggle Reminder
