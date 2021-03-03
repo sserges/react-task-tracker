@@ -17,18 +17,6 @@
       "day": "hhhhhh",
       "reminder": true,
       "id": 3
-    },
-    {
-      "text": "eeeeeee",
-      "day": "ggggg",
-      "reminder": true,
-      "id": 4
-    },
-    {
-      "text": "ccccc",
-      "day": "vvvv",
-      "reminder": true,
-      "id": 5
     }
   ]
 }
